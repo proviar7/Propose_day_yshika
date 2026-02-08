@@ -1,0 +1,151 @@
+:root {
+    --propose-pink: #ffafbd;
+    --propose-red: #e74c3c;
+    --soft-cream: #fdf2e9;
+    --dark-text: #2c3e50;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Georgia', serif;
+    background: linear-gradient(135deg, var(--propose-pink), var(--soft-cream));
+    color: var(--dark-text);
+    overflow-x: hidden;
+    text-align: center;
+}
+
+.section {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    border-bottom: 1px solid rgba(255,255,255,0.4);
+}
+
+h1 { 
+    font-size: 3rem; 
+    color: var(--propose-red); 
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1); 
+    animation: bounceIn 1s ease-out forwards;
+}
+
+h2 {
+    font-size: 2.2rem;
+    color: var(--dark-text);
+    margin-bottom: 25px;
+}
+
+.shayari { 
+    font-style: italic; 
+    font-size: 1.4rem; 
+    max-width: 600px; 
+    line-height: 1.7;
+    background: rgba(255,255,255,0.6); 
+    padding: 30px; 
+    border-radius: 20px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+    margin: 20px 0;
+}
+
+.memory-card {
+    background: rgba(255,255,255,0.7);
+    padding: 30px;
+    border-radius: 15px;
+    max-width: 550px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    margin: 20px 0;
+}
+.memory-card h3 {
+    color: var(--propose-red);
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+.memory-card p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+button {
+    padding: 15px 30px;
+    font-size: 1.1rem;
+    background: var(--propose-red);
+    color: white;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    margin-top: 25px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+}
+button:hover { 
+    transform: translateY(-3px) scale(1.05); 
+    background-color: #c0392b;
+}
+
+.fade-in { opacity: 0; transition: opacity 2s ease-in; }
+.visible { opacity: 1; }
+
+.falling-hearts {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    pointer-events: none;
+    z-index: -1;
+}
+
+/* Final Proposal Section */
+.final-section {
+    background: var(--propose-pink);
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
+.final-section h1 {
+    font-size: 4rem;
+    color: white;
+}
+.final-message {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+.final-question {
+    font-size: 2.5rem;
+    font-weight: bolder;
+    margin-bottom: 30px;
+    color: #ffe6f2;
+}
+
+/* Purane proposal-buttons section ko isse replace karein */
+.proposal-buttons {
+    display: flex;
+    gap: 30px;
+    margin-top: 40px;
+    position: relative;
+    height: 100px; /* Space for moving button */
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.big-button {
+    padding: 15px 30px;
+    font-size: 1.5rem;
+    border-radius: 40px;
+    transition: all 0.2s ease; /* Fast transition for moving */
+    cursor: pointer;
+    border: none;
+    color: white;
+}
+
+#yesBtn { 
+    background-color: #27ae60; 
+    z-index: 10;
+}
+
+#noBtn { 
+    background-color: #e74c3c; 
+    position: absolute; /* Moving ke liye zaroori hai */
+}
